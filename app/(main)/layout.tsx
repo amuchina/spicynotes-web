@@ -32,7 +32,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { HiCog6Tooth, HiInboxStack } from "react-icons/hi2";
 
-
 const data = {
   navMain: [
     {
@@ -40,11 +39,23 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Installation",
+          title: "Ricetta Besciamella",
           url: "#",
         },
         {
-          title: "Project Structure",
+          title: "Impasto Lasagne",
+          url: "#",
+        },
+        {
+          title: "Lista della spesa",
+          url: "#",
+        },
+        {
+          title: "Codice cassaforte",
+          url: "#",
+        },
+        {
+          title: "Credenziali",
           url: "#",
         },
       ],
@@ -54,34 +65,36 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Routing",
+          title: "TODO List",
           url: "#",
         },
         {
-          title: "Data Fetching",
+          title: "Diario Personale",
           url: "#",
           isActive: true,
         },
       ],
     },
     {
-      title: "Gruppi",
+      title: "Cartelle",
       url: "#",
       items: [
         {
-          title: "Components",
+          title: "Cucina",
           url: "#",
         },
         {
-          title: "File Conventions",
+          title: "Motivazionali",
+          url: "#",
+        },
+        {
+          title: "Scuola",
           url: "#",
         },
       ],
     },
-
   ],
-}
-
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -154,17 +167,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <SidebarTrigger />
               <Separator orientation="vertical" className="mr-2 h-4" />
               <div className="flex flex-row justify-center gap-2 w-full">
-                <Input className="w-full" type="search" placeholder="Ask AI ✨ ..." />
-                <Button variant={'ghost'}>
-                  <HiInboxStack className="size-6"/>  
+                <Input
+                  className="w-full"
+                  type="search"
+                  placeholder="Ask AI ✨ ..."
+                />
+                <Button variant={"ghost"}>
+                  <HiInboxStack className="size-6" />
                 </Button>
-                <Button variant={'ghost'}>
+                <Button variant={"ghost"}>
                   <HiCog6Tooth className="size-6" />
                 </Button>
-
-
               </div>
-
             </header>
 
             {/* Page Content */}
